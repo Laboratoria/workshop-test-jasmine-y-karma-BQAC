@@ -11,6 +11,10 @@ describe('SignInComponent', () => {
   let authService: AuthService;
 
   beforeEach(() => {
+    // creamos un objeto simulado (spy) de la clase HttpClient. Estos sirve para :
+    // - Aislamiento de la prueba : No estás probando la funcionalidad real de HttpClient, que ya ha sido probada por Angular
+    // - Control total: puedes definir el comportamiento específico que deseas que tenga en el contexto de tu prueba.
+    // - Evita llamadas reales a servicios externos:  Llamar directamente a un servicio HTTP real en una prueba puede ser costoso en términos de tiempo y recursos, y también podría afectar el estado del servidor.
     const httpClientSpy = jasmine.createSpyObj('HttpClient', ['post']);
 
     TestBed.configureTestingModule({
@@ -21,10 +25,10 @@ describe('SignInComponent', () => {
         { provide: HttpClient, useValue: httpClientSpy },
       ],
     });
-    fixture = TestBed.createComponent(SignInComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(SignInComponent); // Crea una instancia del componente que vas a probar
+    component = fixture.componentInstance; // se utiliza para interactuar con el componente en las pruebas, acceder a sus propiedades y métodos, y realizar comprobaciones en él.
     authService = TestBed.inject(AuthService);
-    fixture.detectChanges();
+    fixture.detectChanges(); // Detectar y aplicar cambios en el componente
   });
 
   it('initialize the form', () => {
