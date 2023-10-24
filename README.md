@@ -4,18 +4,18 @@ En este taller, aprenderemos sobre pruebas unitarias en Angular utilizando dos h
 
 ## ¿Qué es Jasmine?
 
-Jasmine es un marco de pruebas (framework) de JavaScript diseñado para facilitar la escritura y ejecución de pruebas unitarias en aplicaciones web. Aprenderemos a usar Jasmine para definir y ejecutar pruebas en Angular (No es exclusivo de Angular, lo puedes usar en cualquier aplicación web).
+Jasmine es un marco de pruebas (framework) de JavaScript diseñado para facilitar la escritura y ejecución de pruebas unitarias en aplicaciones web. Aprenderemos a usar Jasmine para definir y ejecutar pruebas en Angular (No es exclusivo de este framework, lo puedes usar en cualquier aplicación web).
 
 Algunas de sus características son:
 
-- Sintaxis Declarativa: Jasmine utiliza una sintaxis declarativa que hace que las pruebas sean más legibles y comprensibles. Puedes utilizar declaraciones como describe, it, expect y funciones de comparación para definir tus pruebas. [Más información](https://codingpotions.com/angular-testing/)
+- **Sintaxis Declarativa**: Jasmine utiliza una sintaxis declarativa que hace que las pruebas sean más legibles y comprensibles. Puedes utilizar declaraciones como describe, it, expect y funciones de comparación para definir tus pruebas. [Más información](https://codingpotions.com/angular-testing/)
 
-- Spying: Jasmine proporciona la capacidad de espiar o simular llamadas a funciones o métodos, lo que es útil para verificar que ciertas funciones se han llamado con los argumentos correctos.
+- **Spying**: Jasmine proporciona la capacidad de espiar o simular llamadas a funciones o métodos, lo que es útil para verificar que ciertas funciones se han llamado con los argumentos correctos.
 
 [Documentación oficial](https://jasmine.github.io/api/edge/Spy.html)
 [Más información](https://www.digitalocean.com/community/tutorials/angular-testing-with-spies)
 
-- Herramientas de Reporter: Jasmine incluye informes de resultados de pruebas que facilitan la identificación de pruebas que fallaron y la comprensión de los problemas.
+- **Herramientas de Reporter**: Jasmine incluye informes de resultados de pruebas que facilitan la identificación de pruebas que fallaron y la comprensión de los problemas.
 
 ## ¿Qué es Karma?
 
@@ -29,13 +29,13 @@ Afortunadamente, al crear un proyecto con Angular , este se encarga de proporcio
 
 En el contexto de Angular, existen varios tipos de pruebas unitarias que podemos realizar:
 
-- Pruebas de Componentes: Estas pruebas se centran en las partes individuales de nuestra interfaz de usuario, es decir, en los componentes de Angular. Aseguraremos que los componentes se rendericen correctamente y funcionen según lo esperado.
+- **Pruebas de Componentes**: Estas pruebas se centran en las partes individuales de nuestra interfaz de usuario, es decir, en los componentes de Angular. Aseguraremos que los componentes se rendericen correctamente y funcionen según lo esperado.
 
-- Pruebas de Servicios: Los servicios son una parte fundamental de la lógica de negocio de una aplicación Angular. Realizaremos pruebas para garantizar que los servicios se comporten adecuadamente.
+- **Pruebas de Servicios**: Los servicios son una parte fundamental de la lógica de negocio de una aplicación Angular. Realizaremos pruebas para garantizar que los servicios se comporten adecuadamente.
 
-- Pruebas de Pipes y Directivas: Los pipes y directivas son características importantes en Angular. Aprenderemos a probar su comportamiento y personalización.
+- **Pruebas de Pipes y Directivas**: Los pipes y directivas son características importantes en Angular. Aprenderemos a probar su comportamiento y personalización.
 
-- Pruebas de Rutas: Angular proporciona un enrutador para la navegación en la aplicación. Verificaremos que las rutas y la navegación funcionen correctamente.
+- **Pruebas de Rutas**: Angular proporciona un enrutador para la navegación en la aplicación. Verificaremos que las rutas y la navegación funcionen correctamente.
 
 ## ¿Qué son los archivos .spec.ts?
 
@@ -44,12 +44,12 @@ Por cada componente o servicio que creemos con la ayuda de Angular CLI, se nos g
 
 ## Buenas prácticas
 
-- Aislamiento de Pruebas: Asegurarse de que cada prueba sea independiente y no afecte a otras pruebas.
+- **Aislamiento de Pruebas**: Asegurarse de que cada prueba sea independiente y no afecte a otras pruebas.
   Mocking: Utilizar mocks para simular dependencias externas y controlar el comportamiento de las pruebas.
 
-- Descriptores Significativos: Utilizar nombres de pruebas descriptivos para facilitar la comprensión de lo que se está probando.
+- **Descriptores Significativos**: Utilizar nombres de pruebas descriptivos para facilitar la comprensión de lo que se está probando.
 
-- Pruebas Regresivas: Asegurarse de que las pruebas sigan funcionando a medida que se realiza el desarrollo y las actualizaciones de la aplicación.
+- **Pruebas Regresivas**: Asegurarse de que las pruebas sigan funcionando a medida que se realiza el desarrollo y las actualizaciones de la aplicación.
 
 ## TestBed
 
