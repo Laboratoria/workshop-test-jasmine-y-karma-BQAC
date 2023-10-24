@@ -1,0 +1,119 @@
+/* Importing Variables. */
+@import "../../../../variables.scss";
+
+#cont-form {
+  width: 68vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: 120px;
+    margin-bottom: 15px;
+    margin-top: -80px;
+  }
+  h2 {
+    font-family: $primary-font;
+    margin-bottom: 30px;
+  }
+  .row1 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+    margin-bottom: 24px;
+    font-family: $secondary-font;
+    .inputContainer {
+      width: 100%;
+      position: relative;
+      input {
+        margin-top: 7px;
+        height: 34px;
+        width: 100%;
+        font-size: 16px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        border-radius: 11px;
+        margin-bottom: 4px;
+        &:focus {
+          outline: none;
+          border: 3px solid $color-bq4;
+        }
+
+        &:focus ~ i {
+          color: #222121;
+        }
+        &.is-invalid {
+          border: 2px solid $color-error;
+        }
+        &.is-invalid ~ i {
+          color: $color-error;
+        }
+      }
+      i {
+        position: absolute;
+        right: 15px;
+        font-size: 16px;
+        color: grey;
+        top: 49px;
+      }
+      .fa-eye,
+      .fa-eye-slash {
+        margin-left: 86%;
+      }
+    }
+  }
+  .errorMessage {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+    height: 18px;
+    margin-top: 0;
+  }
+  .buttonContainer {
+    margin-top: 30px;
+    .spinner-border {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+.container-error {
+  height: 18px;
+  width: 100%;
+}
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $color-bq4;
+}
+
+.error-text {
+  color: $color-error;
+  text-align: left;
+  font-family: $secondary-font;
+}
+
+.loadingMessage {
+  visibility: hidden;
+}
+
+.btn-ppal {
+  width: 130px;
+  height: 37px;
+  background-color: #fff;
+  color: $color-bq2;
+  font-family: $primary-font;
+  border-radius: 9px;
+  border: 2px solid $color-bq3;
+}
+
+.btn-ppal :hover {
+  color: $color-bq3;
+}

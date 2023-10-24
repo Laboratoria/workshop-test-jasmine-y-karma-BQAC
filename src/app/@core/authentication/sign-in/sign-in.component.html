@@ -1,0 +1,73 @@
+<div class="containerLogin">
+  <form
+    id="cont-form"
+    autocomplete="off"
+    [formGroup]="formLogin"
+    (ngSubmit)="signIn()"
+  >
+    <img src="../../../assets/img/burger.png" alt="logo" class="logo" />
+    <h2>Inicio de Sesión</h2>
+    <div class="row1">
+      <div class="inputContainer">
+        <label for="username">Usuario</label>
+        <input
+          type="text"
+          id="username"
+          required
+          placeholder="hola@burguerqueen.com"
+          formControlName="email"
+          [class.is-invalid]="isFieldInvalid('email')"
+        />
+        <i
+          class="fas fa-user"
+          id="icono-user"
+          [class.is-invalid]="isFieldInvalid('email')"
+        ></i>
+      </div>
+      <div class="container-error">
+        <span *ngIf="isFieldInvalid('email')" class="error-text"
+          >Ingrese su email</span
+        >
+      </div>
+    </div>
+    <div class="row1">
+      <div class="inputContainer">
+        <label for="password">Contraseña</label>
+        <input
+          [type]="attrsToShowPassword.inputPasswordType"
+          id="password"
+          required
+          #password
+          placeholder="Contraseña"
+          formControlName="password"
+          [class.is-invalid]="isFieldInvalid('password')"
+        />
+        <i
+          [class]="attrsToShowPassword.iconClass"
+          role="button"
+          y
+          tabindex="0"
+          (click)="showPsw()"
+        ></i>
+      </div>
+      <span *ngIf="isFieldInvalid('password')" class="error-text"
+        >Ingrese su contraseña</span
+      >
+    </div>
+    <div class="errorMessage">
+      <span *ngIf="errorMessage" class="error-text">{{ errorMessage }}</span>
+    </div>
+    <div class="buttonContainer">
+      <button type="submit" class="btn-ppal" [disabled]="isLoading">
+        <div *ngIf="isLoading" class="spinner-border">
+          <span class="visually-hidden"></span>
+        </div>
+
+        <span *ngIf="!isLoading"> Ingresar</span>
+      </button>
+    </div>
+    <div *ngIf="isLoading" aria-live="polite" class="loadingMessage">
+      Formulario enviado, estado: cargando
+    </div>
+  </form>
+</div>
