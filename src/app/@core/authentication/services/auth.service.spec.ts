@@ -42,6 +42,7 @@ describe('AuthService', () => {
       providers: [AuthService, MockLocalStorageService],
     });
 
+    //  obtener instancias de los servicios para el cotexto de pruebas
     authService = TestBed.inject(AuthService);
     httpTestingController = TestBed.inject(HttpTestingController);
     localStorageService = TestBed.inject(MockLocalStorageService);

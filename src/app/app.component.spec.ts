@@ -47,7 +47,7 @@ describe('AppComponent', () => {
 
     fixture.detectChanges();
     authService.loginResponse$.subscribe(() => {
-      expect(routerSpy).toHaveBeenCalledWith(['/orders/create']);
+      expect(routerSpy).toHaveBeenCalledWith(['/orders/inicio']);
     });
   });
 
